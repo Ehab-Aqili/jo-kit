@@ -1,0 +1,202 @@
+/* Steps Component Styles */
+
+.steps-container {
+  width: 100%;
+}
+
+.steps-flex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Step Item */
+.step-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Indicator Row */
+.step-indicator-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+/* Connector Line */
+.step-connector {
+  flex: 1;
+  transition: background-color 0.3s;
+}
+
+/* Circle Button */
+.step-circle {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  transition: all 0.3s;
+  outline: none;
+  background: transparent;
+}
+
+.step-circle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Circle States */
+.step-circle-completed {
+  cursor: pointer;
+}
+
+.step-circle-current {
+  cursor: pointer;
+}
+
+.step-circle-inactive {
+  cursor: default;
+}
+
+.step-circle-clickable {
+  cursor: pointer;
+}
+
+.step-circle-clickable:hover {
+  opacity: 0.9;
+}
+
+.step-circle-not-clickable {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.step-circle-readonly {
+  cursor: default;
+}
+
+/* Icon and Number */
+.step-number {
+  font-weight: 600;
+}
+
+.step-checkmark {
+  display: inline-block;
+}
+
+/* Title Area */
+.step-title-container {
+  text-align: center;
+}
+
+.step-title {
+  font-weight: 500;
+  transition: color 0.3s;
+  margin: 0;
+}
+
+.step-value {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  margin: 4px 0 0 0;
+}
+
+/* Size Variants */
+/* Small */
+.steps-size-sm .step-circle {
+  width: 32px;
+  height: 32px;
+}
+
+.steps-size-sm .step-connector {
+  height: 2px;
+}
+
+.steps-size-sm .step-checkmark {
+  width: 14px;
+  height: 14px;
+}
+
+.steps-size-sm .step-number {
+  font-size: 12px;
+}
+
+.steps-size-sm .step-title-container {
+  margin-top: 8px;
+}
+
+.steps-size-sm .step-title {
+  font-size: 12px;
+}
+
+.steps-size-sm .step-value {
+  font-size: 10px;
+}
+
+/* Medium (Default) */
+.steps-size-md .step-circle {
+  width: 48px;
+  height: 48px;
+}
+
+.steps-size-md .step-connector {
+  height: 2px;
+}
+
+.steps-size-md .step-checkmark {
+  width: 20px;
+  height: 20px;
+}
+
+.steps-size-md .step-number {
+  font-size: 14px;
+}
+
+.steps-size-md .step-title-container {
+  margin-top: 12px;
+}
+
+.steps-size-md .step-title {
+  font-size: 14px;
+}
+
+.steps-size-md .step-value {
+  font-size: 12px;
+}
+
+/* Large */
+.steps-size-lg .step-circle {
+  width: 64px;
+  height: 64px;
+}
+
+.steps-size-lg .step-connector {
+  height: 4px;
+}
+
+.steps-size-lg .step-checkmark {
+  width: 24px;
+  height: 24px;
+}
+
+.steps-size-lg .step-number {
+  font-size: 16px;
+}
+
+.steps-size-lg .step-title-container {
+  margin-top: 16px;
+}
+
+.steps-size-lg .step-title {
+  font-size: 16px;
+}
+
+.steps-size-lg .step-value {
+  font-size: 14px;
+}
