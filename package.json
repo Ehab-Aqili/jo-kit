@@ -1,0 +1,60 @@
+{
+  "name": "ihabaloqaily",
+  "version": "1.0.0",
+  "description": "A lightweight, zero-dependency React Steps/Stepper component with TypeScript support and CSS styling",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./steps.css": "./dist/components/steps/steps.css",
+    "./components/steps/steps.css": "./dist/components/steps/steps.css",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "components",
+    "index.ts",
+    "README.md",
+    "components/steps/steps.css"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json && npm run copy-css",
+    "copy-css": "powershell -Command \"Copy-Item -Path 'components/steps/steps.css' -Destination 'dist/components/steps/steps.css' -Force; Copy-Item -Path 'components/steps/steps.css.d.ts' -Destination 'dist/components/steps/steps.css.d.ts' -Force\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "steps",
+    "stepper",
+    "progress",
+    "typescript",
+    "zero-dependency",
+    "lightweight",
+    "no-dependencies",
+    "css",
+    "customizable"
+  ],
+  "author": "ihabaloqaily",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ehab-Aqili/jo-kit"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}

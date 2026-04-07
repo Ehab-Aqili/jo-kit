@@ -1,0 +1,23 @@
+# Source files
+app/
+public/
+styles/
+
+# Config files
+.next/
+node_modules/
+*.log
+.DS_Store
+.env*
+.vscode/
+.idea/
+
+# Development files
+tsconfig.json
+next.config.mjs
+next-env.d.ts
+pnpm-lock.yaml
+components.json
+postcss.config.mjs
+
+# Keep only dist and necessary files
